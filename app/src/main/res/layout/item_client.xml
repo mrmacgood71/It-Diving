@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="248dp"
+    android:padding="24dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="12dp"
+    android:id="@+id/client_card">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_layout"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/client_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            tools:src="@drawable/first_caller"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="asdfjasjdfl;kjasldfkjasld;fjkalsd;fjlsadjkfajksdflkasjdfl;jasd;lffjal;skdjfl;askjdf"
+            app:drawableRightCompat="@drawable/mic_white_16dp" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="client_image,name_text"
+            app:barrierDirection="bottom"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/barrier"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
